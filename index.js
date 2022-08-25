@@ -1,0 +1,237 @@
+const dataArr = {
+  items: [
+    {
+      Id: 3,
+      ActionTimestamp: '2022-08-20T20:04:50.000Z',
+      ActionType: 'PropertyRemovedFromFavorites',
+      ActionTypeId: 14,
+      EntityType: 'FavoriteProperty',
+      AgentId: 2,
+      EntityId: 3,
+      Payload: {
+        mlsId: 'MRD11338893}',
+        description: 'Property MRD11338893} removed from favorite.',
+        NotificationType: 'PropertyRemovedFromFavorites',
+        Address: ' Chicago, IL 60644',
+      },
+      Role: 'Client',
+      UserId: 3,
+      TagLine: 'Sample Client removed  Chicago, IL 60644 from their favorites.',
+      UserEmail: 'sampleclient@gmail.com',
+      UserFirstName: 'Sample',
+      UserLastName: 'Client',
+    },
+    {
+      Id: 4,
+      ActionTimestamp: '2022-08-20T20:04:52.000Z',
+      ActionType: 'PropertyAddedToFavorites',
+      ActionTypeId: 13,
+      EntityType: 'FavoriteProperty',
+      AgentId: 2,
+      EntityId: 3,
+      Payload: {
+        mlsId: 'MRD11338893',
+        description: 'Property MRD11338893 added to favorite.',
+        NotificationType: 'PropertyAddedToFavorites',
+        Address: ' Chicago, IL 60644',
+      },
+      Role: 'Client',
+      UserId: 3,
+      TagLine: 'Sample Client added a new favorite.  Chicago, IL 60644.',
+      UserEmail: 'sampleclient@gmail.com',
+      UserFirstName: 'Sample',
+      UserLastName: 'Client',
+    },
+    {
+      Id: 6,
+      ActionTimestamp: '2022-08-20T20:04:53.000Z',
+      ActionType: 'PropertyRemovedFromFavorites',
+      ActionTypeId: 14,
+      EntityType: 'FavoriteProperty',
+      AgentId: 2,
+      EntityId: 3,
+      Payload: {
+        mlsId: 'MRD11402209}',
+        description: 'Property MRD11338893} removed from favorite.',
+        NotificationType: 'PropertyRemovedFromFavorites',
+        Address: '721-723 N Troy Street Chicago, IL 60612',
+      },
+      Role: 'Client',
+      UserId: 3,
+      TagLine:
+        'Sample Client removed 721-723 N Troy Street Chicago, IL 60612 from their favorites.',
+      UserEmail: 'sampleclient@gmail.com',
+      UserFirstName: 'Sample',
+      UserLastName: 'Client',
+    },
+    {
+      Id: 1,
+      ActionTimestamp: '2022-08-20T20:04:43.000Z',
+      ActionType: 'PreApprovalRequested',
+      ActionTypeId: 5,
+      EntityType: 'FavoriteProperty',
+      AgentId: 2,
+      EntityId: 3,
+      Payload: {
+        PartnerId: 16,
+        PartnerName: 'Partner Test',
+      },
+      Role: 'Client',
+      UserId: 3,
+      TagLine: 'Sample Client requested a pre-approval from Partner Test.',
+      UserEmail: 'sampleclient@gmail.com',
+      UserFirstName: 'Sample',
+      UserLastName: 'Client',
+    },
+    {
+      Id: 17,
+      ActionTimestamp: '2022-08-25T09:53:40.000Z',
+      ActionType: 'ShowingAppointmentRequested',
+      ActionTypeId: 26,
+      EntityType: 'Showing',
+      AgentId: 2,
+      EntityId: 3,
+      Payload: {
+        AppointmentId: 7,
+        ShowingId: 3,
+        PropertyTransactionId: 5,
+        ByWho: {
+          Email: 'sheila@caldwellbanker.com',
+          FirstName: 'Sheila',
+          LastName: 'Reddy',
+          UserId: 2,
+        },
+        IsRescheduled: false,
+        AppointmentDate: '2022-08-30T09:53:16.000Z',
+        AppointmentStartTime: '2022-08-30T06:00:00.649Z',
+        AppointmentEndTime: '2022-08-30T06:30:00.649Z',
+        NotificationType: 'ShowingAppointmentRequested',
+      },
+      Role: null,
+      UserId: 2,
+      TagLine:
+        'AR with ARRR requested a showing appointment for 08-30-2022 at 11:00 AM for property Detroit Metro Airport, Detroit, MI, USA.',
+      UserEmail: 'sheila@caldwellbanker.com',
+      UserFirstName: 'Sheila',
+      UserLastName: 'Reddy',
+    },
+    {
+      Id: 18,
+      ActionTimestamp: '2022-08-25T09:54:23.000Z',
+      ActionType: 'ShowingAppointmentApprovalApproved',
+      ActionTypeId: 33,
+      EntityType: 'Showing',
+      AgentId: 2,
+      EntityId: 3,
+      Payload: {
+        DateTime: '2022-08-25T09:53:40.244Z',
+        ShowingId: 3,
+        AppointmentId: 7,
+        AppointmentApprovalId: 13,
+        NotificationType: 'ShowingAppointmentApprovalApproved',
+        ByWho: {
+          UserId: 2,
+          Email: 'sheila@caldwellbanker.com',
+        },
+      },
+      Role: null,
+      UserId: 2,
+      TagLine:
+        'The showing appointment request for 08-30-2022 at 11:00 AM was approved by Sheila on 08-25-2022 at 02:54 PM. Their approval was pending for 0 day and 0 hour before it was approved. The appointment was requested by AR with ARRR for property Detroit Metro Airport, Detroit, MI, USA.',
+      UserEmail: 'sheila@caldwellbanker.com',
+      UserFirstName: 'Sheila',
+      UserLastName: 'Reddy',
+    },
+    {
+      Id: 15,
+      ActionTimestamp: '2022-08-25T09:51:40.000Z',
+      ActionType: 'ShowingLinkCreated',
+      ActionTypeId: 30,
+      EntityType: 'Showing',
+      AgentId: 2,
+      EntityId: 3,
+      Payload: {
+        DateTime: '2022-08-25T04:50:39.909Z',
+        ByWho: '2',
+        GeneratedLink:
+          'http://localhost:8080/showing/bb5da81c-27f8-41dc-9fcb-3885a4f6960c',
+        ShowingId: 3,
+        NotificationType: 'ShowingLinkCreated',
+      },
+      Role: null,
+      UserId: 2,
+      TagLine: null,
+      UserEmail: 'sheila@caldwellbanker.com',
+      UserFirstName: 'Sheila',
+      UserLastName: 'Reddy',
+    },
+    {
+      Id: 16,
+      ActionTimestamp: '2022-08-25T09:51:40.000Z',
+      ActionType: 'ShowingLinkEnabled',
+      ActionTypeId: 31,
+      EntityType: 'Showing',
+      AgentId: 2,
+      EntityId: 3,
+      Payload: {
+        DateTime: '2022-08-25T04:50:39.909Z',
+        ByWho: '2',
+        GeneratedLink:
+          'http://localhost:8080/showing/bb5da81c-27f8-41dc-9fcb-3885a4f6960c',
+        ShowingId: 3,
+        NotificationType: 'ShowingLinkEnabled',
+      },
+      Role: null,
+      UserId: 2,
+      TagLine: null,
+      UserEmail: 'sheila@caldwellbanker.com',
+      UserFirstName: 'Sheila',
+      UserLastName: 'Reddy',
+    },
+    {
+      Id: 19,
+      ActionTimestamp: '2022-08-25T09:54:23.000Z',
+      ActionType: 'ShowingAppointmentApproved',
+      ActionTypeId: 29,
+      EntityType: 'Showing',
+      AgentId: 2,
+      EntityId: 3,
+      Payload: {
+        ShowingId: 3,
+        AppointmentId: 7,
+        NotificationType: 'ShowingAppointmentApproved',
+        ByWho: {
+          Email: 'sheila@caldwellbanker.com',
+          FirstName: 'Sheila',
+          LastName: 'Reddy',
+          UserId: 2,
+        },
+      },
+      Role: null,
+      UserId: 2,
+      TagLine:
+        'All parties approved the showing appointment request for 08-30-2022 at 11:00 AM. The appointment was requested by AR with ARRR for property Detroit Metro Airport, Detroit, MI, USA.',
+      UserEmail: 'sheila@caldwellbanker.com',
+      UserFirstName: 'Sheila',
+      UserLastName: 'Reddy',
+    },
+  ],
+};
+let prevDate = '';
+let arrData = [];
+dataArr.items.forEach((item) => {
+  // console.log(new Date(item.ActionTimestamp).toLocaleDateString());
+  if (prevDate !== new Date(item.ActionTimestamp).toLocaleDateString()) {
+    prevDate = new Date(item.ActionTimestamp).toLocaleDateString();
+    arrData.push({
+      date: new Date(item.ActionTimestamp),
+      data: dataArr.items.filter(
+        (log) =>
+          new Date(log.ActionTimestamp).toLocaleDateString() ===
+          new Date(item.ActionTimestamp).toLocaleDateString()
+      ),
+    });
+  }
+});
+
+console.log(arrData);
